@@ -21,7 +21,7 @@ export const FailRule = () => {
   function handleSubmit(values) {
     const { method, url } = values
     if (!url) {
-      alert('Set URL')
+      alert('confirm URL')
       return
     }
     setFailConfig((c) => [
@@ -78,7 +78,7 @@ export const FailRule = () => {
               </a>
             ]}
           >
-            <Text mark> Request method: {item.requestMethod || 'none'} </Text>
+            <Text mark> request method{item.requestMethod || 'none'} </Text>
             <Typography.Text>URL: {item.urlMatch || 'none'}</Typography.Text>
           </List.Item>
         )}

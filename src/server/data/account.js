@@ -2,7 +2,7 @@ import { ServerError } from '../util'
 
 const usersKey = "__jira_users__";
 
-let users = {};
+let users = { };
 
 const persist = () =>
   window.localStorage.setItem(usersKey, JSON.stringify(users));
@@ -17,12 +17,12 @@ try {
 
 const validateUserForm = ({ name, password }) => {
   if (!name) {
-    const error = new ServerError("Input account name");
+    const error = new ServerError("input username");
     error.status = 400;
     throw error;
   }
   if (!password) {
-    const error = new ServerError("Input password");
+    const error = new ServerError("input password");
     error.status = 400;
     throw error;
   }
@@ -46,11 +46,11 @@ function sanitizeUser(user) {
 const authenticate = ({ name, password }) => {
   validateUserForm({ name, password });
   const id = +hash(name);
-  const user = users[id] || {};
+  const user = users[id] || { };
   if (user.passwordHash === hash(password)) {
     return { ...sanitizeUser(user), token: btoa(user.id + "") };
   }
-  const error = new ServerError("account name or password is wrong");
+  const error = new ServerError("Wrong username or password");
   error.status = 400;
   throw error;
 };
@@ -58,7 +58,7 @@ const authenticate = ({ name, password }) => {
 function validateUser(id) {
   load();
   if (!users[id]) {
-    const error = new ServerError(`cannot find the id "${id}" account, try to clean the database`);
+    const error = new ServerError(`cannot find "${id}" user, try to clear database`);
     error.status = 404;
     throw error;
   }
@@ -84,7 +84,7 @@ async function remove(id) {
 }
 
 async function reset() {
-  users = {};
+  users = { };
   persist();
 }
 
@@ -93,7 +93,7 @@ async function create({ name, password }) {
   const id = +hash(name);
   const passwordHash = hash(password);
   if (users[id]) {
-    const error = new ServerError(`account name "${name}" is already existed`);
+    const error = new ServerError(`username "${name}" already existed`);
     error.status = 400;
     throw error;
   }

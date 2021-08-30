@@ -25,7 +25,7 @@ export const DevTool = () => {
             zIndex: 9999
           }}
         >
-          <Tooltip title={'Click to use dev console table'}>
+          <Tooltip title={'Click to use console'}>
             <SettingTwoTone
               style={{ fontSize: '22px' }}
               onClick={() => setVisible(true)}
@@ -47,7 +47,7 @@ export const DevTool = () => {
             tab={
               <span>
                 <SettingOutlined />
-                Console Table
+                Console
               </span>
             }
             key="1"
@@ -58,14 +58,14 @@ export const DevTool = () => {
             <div
               style={{ marginBottom: '0.3rem', display: 'flex', justifyContent: 'space-between' }}
             >
-              <label>Request Minimum Time</label>
+              <label>request min time</label>
               <RequestTime />
             </div>
             <div
               className={'form-item'}
               style={{ marginBottom: '0.3rem', display: 'flex', justifyContent: 'space-between' }}
             >
-              <label>Request Failure Ratio</label>
+              <label>request failure ration</label>
               <FailureRate />
             </div>
           </TabPane>
@@ -73,7 +73,7 @@ export const DevTool = () => {
             tab={
               <span>
                 <StopOutlined />
-                Async request failure setting
+                async request failure setting
               </span>
             }
             key="2"

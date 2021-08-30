@@ -33,7 +33,7 @@ export const handlers = [
     async resolver(req, res, ctx) {
       try {
         if (shouldFail(req)) {
-          throw new Error("Request fail, check devtool setting");
+          throw new Error("Request fail, try to check dev-tool setting");
         }
         const result = await handler.resolver(req, res, ctx);
         return result;

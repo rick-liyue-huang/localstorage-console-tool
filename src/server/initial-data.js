@@ -21,17 +21,17 @@ export const tags = [
 
 export const epics = [
   {
-    name: "Delivery Resource Table Devlopment",
+    name: "Develivery Material Form Development",
     start: new Date("2020-12-10").getTime(),
     end: new Date("2021-01-11").getTime(),
   },
   {
-    name: "Devlivery Map Development",
+    name: "Delivery Map Development",
     start: new Date("2021-01-12").getTime(),
     end: new Date("2021-02-14").getTime(),
   },
   {
-    name: "Devlivery Map Development",
+    name: "Delivery Map Development",
     start: new Date("2021-01-12").getTime(),
     end: new Date("2021-02-14").getTime(),
   },
@@ -39,32 +39,32 @@ export const epics = [
 
 export const kanbans = [
   {
-    name: "ready",
+    name: "Ready",
   },
   {
-    name: "developing",
+    name: "Developing",
   },
   {
-    name: "completed",
+    name: "Completed",
   },
 ];
 
 export const users = [
   {
     name: "Rick",
-    organization: "Takeaway Group",
+    organization: "Delivery Group",
   },
   {
     name: "Leo",
-    organization: "Takeaway Group",
-  },
-  {
-    name: "AJ",
-    organization: "Headerquarter Group",
+    organization: "Delivery Group",
   },
   {
     name: "Claire",
-    organization: "Middleground Group",
+    organization: "Headquarter",
+  },
+  {
+    name: "AJ",
+    organization: "Middle Platform",
   },
 ];
 
@@ -79,7 +79,7 @@ export const projects = [
 
 export const tasks = [
   {
-    name: "Management Register Page Development",
+    name: "Register Development",
     tags: [1, 2],
     reporterId: 1,
     processorId: 2,
@@ -87,10 +87,10 @@ export const tasks = [
     kanbanId: 1,
     favorite: true,
     typeId: 1,
-    note: "try finish soon",
+    note: "try complete soon",
   },
   {
-    name: "Management Login Page Development",
+    name: "Login Development",
     tags: [2],
     reporterId: 1,
     processorId: 2,
@@ -112,7 +112,7 @@ export const tasks = [
     note: "",
   },
   {
-    name: "Performance Optimization",
+    name: "Performence Optimization",
     tags: [1],
     reporterId: 1,
     processorId: 2,
@@ -123,7 +123,7 @@ export const tasks = [
     note: "",
   },
   {
-    name: "Authentication Management Page Development",
+    name: "Authentication Development",
     tags: [1],
     reporterId: 1,
     processorId: 2,
@@ -145,7 +145,7 @@ export const tasks = [
     note: "",
   },
   {
-    name: "SelfTest",
+    name: "Self Test",
     tags: [1],
     reporterId: 1,
     processorId: 2,

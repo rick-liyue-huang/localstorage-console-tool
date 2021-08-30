@@ -9,7 +9,7 @@ const tryToNumber = (value) => Array.isArray(value) ? value.map(Number) : Number
 const convertIds = (object) => {
   const result = {}
   Object.keys(object).forEach((key) => {
-    // if contain id, such as personId, will transfer to number
+    // 如果包含Id，比如personId，就要转换成数字
     result[key] = key.includes('Id') ? tryToNumber(object[key]) : object[key]
   })
   result.id = tryToNumber(result.id)
